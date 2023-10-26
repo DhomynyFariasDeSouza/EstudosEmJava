@@ -1,11 +1,20 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pessoa {
     private String nome;
     private int idade;
     private Enum<Nacionalidades> nacionalidade;
-    private long CPF;
-    private List<Numero> numero;
+    private String CPF;
+    private List<Numero> numeros;
+
+    public Pessoa(String nome, int idade, Enum<Nacionalidades> nacionalidade, String CPF) {
+        this.nome = nome;
+        this.idade = idade;
+        this.nacionalidade = nacionalidade;
+        this.CPF = CPF;
+        this.numeros = new ArrayList<>();
+    }
 
     public String getNome() {
         return nome;
@@ -31,19 +40,19 @@ public class Pessoa {
         this.nacionalidade = nacionalidade;
     }
 
-    public long getCPF() {
+    public String getCPF() {
         return CPF;
     }
 
-    public void setCPF(long CPF) {
+    public void setCPF(String CPF) {
         this.CPF = CPF;
     }
 
     public List<Numero> getNumero() {
-        return numero;
+        return numeros;
     }
 
-    public void setNumero(List<Numero> numero) {
-        this.numero = numero;
+    public void setNumero(Numero numero) {
+        this.numeros.add(numero);
     }
 }

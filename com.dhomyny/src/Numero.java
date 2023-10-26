@@ -9,4 +9,8 @@ public class Numero {
         this.numero = numero;
     }
 
+    @Override
+    public String toString() {
+        return "Numero{"+"+"+DDDPais+" ("+DDD+") "+numero+ '}';
+    }
 }
